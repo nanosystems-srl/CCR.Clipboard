@@ -864,7 +864,7 @@ function ExpandAndValidateFileName(const FileName: TFileName): TFileName;
 begin
   Result := ExpandFileName(FileName);
   if (Result = '') or not (FileExists(Result) or DirectoryExists(Result)) then
-    raise EClipboardException.CreateResFmt(@SInvalidFileName, [FileName]);
+    raise EClipboardException.CreateResFmt(@SInvalidKnownFileName, [FileName]);
 end;
 
 {$REGION 'TClipboardFormat'}
